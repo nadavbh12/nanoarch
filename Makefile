@@ -2,8 +2,8 @@ target   := nanoarch
 sources  := nanoarch.c
 CFLAGS   := -Wall -O2 -g
 LFLAGS   := -static-libgcc
-LIBS     := -ldl
-packages := gl glew glfw3 alsa
+LIBS     := -ldl -lglfw3 -lasound -lX11 -lXrandr -lXinerama -lXi -lXxf86vm -lXcursor -pthread -lm
+packages := gl glew alsa
 
 # do not edit from here onwards
 objects := $(addprefix build/,$(sources:.c=.o))

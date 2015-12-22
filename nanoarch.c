@@ -228,7 +228,7 @@ static bool video_set_pixel_format(unsigned format) {
 
 	switch (format) {
 	case RETRO_PIXEL_FORMAT_0RGB1555:
-		g_video.pixfmt = GL_UNSIGNED_SHORT_5_5_5_1;
+		g_video.pixfmt = GL_UNSIGNED_SHORT_1_5_5_5_REV;
 		g_video.pixtype = GL_BGRA;
 		g_video.bpp = sizeof(uint16_t);
 		break;
