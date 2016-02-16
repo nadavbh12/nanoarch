@@ -1,9 +1,9 @@
 target   := nanoarch
 sources  := nanoarch.c
-CFLAGS   := -Wall -O2 -g
-LFLAGS   := -static-libgcc
-LIBS     := -ldl -lglfw3 -lasound -lX11 -lXrandr -lXinerama -lXi -lXxf86vm -lXcursor -pthread -lm
-packages := gl glew alsa
+CFLAGS   := -Wall -O2 -g -I /usr/include/SDL
+LFLAGS   := -static-libgcc 
+LIBS     := -ldl -lglfw3 -lasound -lX11 -lXrandr -lXinerama -lXi -lXxf86vm -lXcursor -pthread -lm -lSDL -lSDL_gfx
+packages := gl glew alsa #`sdl2-config --cflags --libs`
 
 # do not edit from here onwards
 objects := $(addprefix build/,$(sources:.c=.o))
